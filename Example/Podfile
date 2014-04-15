@@ -1,0 +1,7 @@
+pod "DayFlow", :path => "../"
+
+target "DayFlow", :exclusive => true do
+end
+
+target "DayFlowTests", :exclusive => true do
+end
