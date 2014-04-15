@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FF2A69CE172D2C07005A1A21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2A69CD172D2C07005A1A21 /* Foundation.framework */; };
-		FF2A69D3172D2C07005A1A21 /* DayFlow.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF2A69D2172D2C07005A1A21 /* DayFlow.h */; };
-		FF2A69DD172D2C64005A1A21 /* DFDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2A69DC172D2C64005A1A21 /* DFDatePickerView.m */; };
-		FFB686AD172E8A660027ADF2 /* NSCalendar+DFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A3172E8A660027ADF2 /* NSCalendar+DFAdditions.m */; };
-		FFB686AE172E8A660027ADF2 /* DFDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A5172E8A660027ADF2 /* DFDatePickerViewController.m */; };
-		FFB686AF172E8A660027ADF2 /* DFDatePickerMonthHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A7172E8A660027ADF2 /* DFDatePickerMonthHeader.m */; };
-		FFB686B0172E8A660027ADF2 /* DFDatePickerDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A9172E8A660027ADF2 /* DFDatePickerDayCell.m */; };
-		FFB686B1172E8A660027ADF2 /* DFDatePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686AB172E8A660027ADF2 /* DFDatePickerCollectionView.m */; };
+		FF2A69D3172D2C07005A1A21 /* DFLDayFlow.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF2A69D2172D2C07005A1A21 /* DFLDayFlow.h */; };
+		FF2A69DD172D2C64005A1A21 /* DFLDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2A69DC172D2C64005A1A21 /* DFLDatePickerView.m */; };
+		FFB686AD172E8A660027ADF2 /* NSCalendar+DFLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A3172E8A660027ADF2 /* NSCalendar+DFLAdditions.m */; };
+		FFB686AE172E8A660027ADF2 /* DFLDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A5172E8A660027ADF2 /* DFLDatePickerViewController.m */; };
+		FFB686AF172E8A660027ADF2 /* DFLDatePickerMonthHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A7172E8A660027ADF2 /* DFLDatePickerMonthHeader.m */; };
+		FFB686B0172E8A660027ADF2 /* DFLDatePickerDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686A9172E8A660027ADF2 /* DFLDatePickerDayCell.m */; };
+		FFB686B1172E8A660027ADF2 /* DFLDatePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB686AB172E8A660027ADF2 /* DFLDatePickerCollectionView.m */; };
 		FFB686B3172E8A970027ADF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB686B2172E8A970027ADF2 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				FF2A69D3172D2C07005A1A21 /* DayFlow.h in CopyFiles */,
+				FF2A69D3172D2C07005A1A21 /* DFLDayFlow.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,19 +35,19 @@
 		FF2A69CA172D2C07005A1A21 /* libDayFlow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDayFlow.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2A69CD172D2C07005A1A21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF2A69D1172D2C07005A1A21 /* DayFlow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayFlow-Prefix.pch"; sourceTree = "<group>"; };
-		FF2A69D2172D2C07005A1A21 /* DayFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DayFlow.h; path = DayFlow/DayFlow.h; sourceTree = "<group>"; };
-		FF2A69DB172D2C64005A1A21 /* DFDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFDatePickerView.h; path = DayFlow/DFDatePickerView.h; sourceTree = "<group>"; };
-		FF2A69DC172D2C64005A1A21 /* DFDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFDatePickerView.m; path = DayFlow/DFDatePickerView.m; sourceTree = "<group>"; };
-		FFB686A3172E8A660027ADF2 /* NSCalendar+DFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+DFAdditions.m"; path = "DayFlow/NSCalendar+DFAdditions.m"; sourceTree = "<group>"; };
-		FFB686A4172E8A660027ADF2 /* NSCalendar+DFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+DFAdditions.h"; path = "DayFlow/NSCalendar+DFAdditions.h"; sourceTree = "<group>"; };
-		FFB686A5172E8A660027ADF2 /* DFDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFDatePickerViewController.m; path = DayFlow/DFDatePickerViewController.m; sourceTree = "<group>"; };
-		FFB686A6172E8A660027ADF2 /* DFDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFDatePickerViewController.h; path = DayFlow/DFDatePickerViewController.h; sourceTree = "<group>"; };
-		FFB686A7172E8A660027ADF2 /* DFDatePickerMonthHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFDatePickerMonthHeader.m; path = DayFlow/DFDatePickerMonthHeader.m; sourceTree = "<group>"; };
-		FFB686A8172E8A660027ADF2 /* DFDatePickerMonthHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFDatePickerMonthHeader.h; path = DayFlow/DFDatePickerMonthHeader.h; sourceTree = "<group>"; };
-		FFB686A9172E8A660027ADF2 /* DFDatePickerDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFDatePickerDayCell.m; path = DayFlow/DFDatePickerDayCell.m; sourceTree = "<group>"; };
-		FFB686AA172E8A660027ADF2 /* DFDatePickerDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFDatePickerDayCell.h; path = DayFlow/DFDatePickerDayCell.h; sourceTree = "<group>"; };
-		FFB686AB172E8A660027ADF2 /* DFDatePickerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFDatePickerCollectionView.m; path = DayFlow/DFDatePickerCollectionView.m; sourceTree = "<group>"; };
-		FFB686AC172E8A660027ADF2 /* DFDatePickerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFDatePickerCollectionView.h; path = DayFlow/DFDatePickerCollectionView.h; sourceTree = "<group>"; };
+		FF2A69D2172D2C07005A1A21 /* DFLDayFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DFLDayFlow.h; path = DayFlow/DFLDayFlow.h; sourceTree = "<group>"; };
+		FF2A69DB172D2C64005A1A21 /* DFLDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFLDatePickerView.h; path = DayFlow/DFLDatePickerView.h; sourceTree = "<group>"; };
+		FF2A69DC172D2C64005A1A21 /* DFLDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFLDatePickerView.m; path = DayFlow/DFLDatePickerView.m; sourceTree = "<group>"; };
+		FFB686A3172E8A660027ADF2 /* NSCalendar+DFLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+DFLAdditions.m"; path = "DayFlow/NSCalendar+DFLAdditions.m"; sourceTree = "<group>"; };
+		FFB686A4172E8A660027ADF2 /* NSCalendar+DFLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+DFLAdditions.h"; path = "DayFlow/NSCalendar+DFLAdditions.h"; sourceTree = "<group>"; };
+		FFB686A5172E8A660027ADF2 /* DFLDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFLDatePickerViewController.m; path = DayFlow/DFLDatePickerViewController.m; sourceTree = "<group>"; };
+		FFB686A6172E8A660027ADF2 /* DFLDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFLDatePickerViewController.h; path = DayFlow/DFLDatePickerViewController.h; sourceTree = "<group>"; };
+		FFB686A7172E8A660027ADF2 /* DFLDatePickerMonthHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFLDatePickerMonthHeader.m; path = DayFlow/DFLDatePickerMonthHeader.m; sourceTree = "<group>"; };
+		FFB686A8172E8A660027ADF2 /* DFLDatePickerMonthHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFLDatePickerMonthHeader.h; path = DayFlow/DFLDatePickerMonthHeader.h; sourceTree = "<group>"; };
+		FFB686A9172E8A660027ADF2 /* DFLDatePickerDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFLDatePickerDayCell.m; path = DayFlow/DFLDatePickerDayCell.m; sourceTree = "<group>"; };
+		FFB686AA172E8A660027ADF2 /* DFLDatePickerDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFLDatePickerDayCell.h; path = DayFlow/DFLDatePickerDayCell.h; sourceTree = "<group>"; };
+		FFB686AB172E8A660027ADF2 /* DFLDatePickerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFLDatePickerCollectionView.m; path = DayFlow/DFLDatePickerCollectionView.m; sourceTree = "<group>"; };
+		FFB686AC172E8A660027ADF2 /* DFLDatePickerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFLDatePickerCollectionView.h; path = DayFlow/DFLDatePickerCollectionView.h; sourceTree = "<group>"; };
 		FFB686B2172E8A970027ADF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -67,19 +67,19 @@
 		FF2A69C1172D2C06005A1A21 = {
 			isa = PBXGroup;
 			children = (
-				FF2A69D2172D2C07005A1A21 /* DayFlow.h */,
-				FFB686A6172E8A660027ADF2 /* DFDatePickerViewController.h */,
-				FFB686A5172E8A660027ADF2 /* DFDatePickerViewController.m */,
-				FF2A69DB172D2C64005A1A21 /* DFDatePickerView.h */,
-				FF2A69DC172D2C64005A1A21 /* DFDatePickerView.m */,
-				FFB686AC172E8A660027ADF2 /* DFDatePickerCollectionView.h */,
-				FFB686AB172E8A660027ADF2 /* DFDatePickerCollectionView.m */,
-				FFB686A8172E8A660027ADF2 /* DFDatePickerMonthHeader.h */,
-				FFB686A7172E8A660027ADF2 /* DFDatePickerMonthHeader.m */,
-				FFB686AA172E8A660027ADF2 /* DFDatePickerDayCell.h */,
-				FFB686A9172E8A660027ADF2 /* DFDatePickerDayCell.m */,
-				FFB686A4172E8A660027ADF2 /* NSCalendar+DFAdditions.h */,
-				FFB686A3172E8A660027ADF2 /* NSCalendar+DFAdditions.m */,
+				FF2A69D2172D2C07005A1A21 /* DFLDayFlow.h */,
+				FFB686A6172E8A660027ADF2 /* DFLDatePickerViewController.h */,
+				FFB686A5172E8A660027ADF2 /* DFLDatePickerViewController.m */,
+				FF2A69DB172D2C64005A1A21 /* DFLDatePickerView.h */,
+				FF2A69DC172D2C64005A1A21 /* DFLDatePickerView.m */,
+				FFB686AC172E8A660027ADF2 /* DFLDatePickerCollectionView.h */,
+				FFB686AB172E8A660027ADF2 /* DFLDatePickerCollectionView.m */,
+				FFB686A8172E8A660027ADF2 /* DFLDatePickerMonthHeader.h */,
+				FFB686A7172E8A660027ADF2 /* DFLDatePickerMonthHeader.m */,
+				FFB686AA172E8A660027ADF2 /* DFLDatePickerDayCell.h */,
+				FFB686A9172E8A660027ADF2 /* DFLDatePickerDayCell.m */,
+				FFB686A4172E8A660027ADF2 /* NSCalendar+DFLAdditions.h */,
+				FFB686A3172E8A660027ADF2 /* NSCalendar+DFLAdditions.m */,
 				FF2A69D0172D2C07005A1A21 /* Supporting Files */,
 				FF2A69CC172D2C07005A1A21 /* Frameworks */,
 				FF2A69CB172D2C07005A1A21 /* Products */,
@@ -162,12 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2A69DD172D2C64005A1A21 /* DFDatePickerView.m in Sources */,
-				FFB686AD172E8A660027ADF2 /* NSCalendar+DFAdditions.m in Sources */,
-				FFB686AE172E8A660027ADF2 /* DFDatePickerViewController.m in Sources */,
-				FFB686AF172E8A660027ADF2 /* DFDatePickerMonthHeader.m in Sources */,
-				FFB686B0172E8A660027ADF2 /* DFDatePickerDayCell.m in Sources */,
-				FFB686B1172E8A660027ADF2 /* DFDatePickerCollectionView.m in Sources */,
+				FF2A69DD172D2C64005A1A21 /* DFLDatePickerView.m in Sources */,
+				FFB686AD172E8A660027ADF2 /* NSCalendar+DFLAdditions.m in Sources */,
+				FFB686AE172E8A660027ADF2 /* DFLDatePickerViewController.m in Sources */,
+				FFB686AF172E8A660027ADF2 /* DFLDatePickerMonthHeader.m in Sources */,
+				FFB686B0172E8A660027ADF2 /* DFLDatePickerDayCell.m in Sources */,
+				FFB686B1172E8A660027ADF2 /* DFLDatePickerCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
