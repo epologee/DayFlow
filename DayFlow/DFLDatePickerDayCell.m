@@ -9,6 +9,8 @@
 
 @implementation DFLDatePickerDayCell
 
+@synthesize date = _date;
+@synthesize enabled = _enabled;
 @synthesize imageView = _imageView;
 @synthesize overlayView = _overlayView;
 

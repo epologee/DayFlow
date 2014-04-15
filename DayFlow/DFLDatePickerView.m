@@ -1,7 +1,7 @@
 #import "DFLDayFlow.h"
 #import "DFLDatePickerCollectionView.h"
-#import "DFLDatePickerDayCell.h"
-#import "DFLDatePickerMonthHeader.h"
+#import "DFLDatePickerCell.h"
+#import "DFLDatePickerHeader.h"
 #import "NSCalendar+DFLAdditions.h"
 
 static NSString *const DFLDatePickerViewCellIdentifier = @"DFLDatePickerViewCellIdentifier";
@@ -64,6 +64,26 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
     return self;
 }
 
+- (Class)cellClass
+{
+    if (!_cellClass)
+    {
+        self.cellClass = NSClassFromString(@"DFLDatePickerDayCell");
+    }
+
+    return _cellClass;
+}
+
+- (Class)headerClass
+{
+    if (!_headerClass)
+    {
+        self.headerClass = NSClassFromString(@"DFLDatePickerMonthHeader");
+    }
+
+    return _headerClass;
+}
+
 - (void)layoutSubviews
 {
 
@@ -102,8 +122,8 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
         _collectionView.delegate = self;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
-        [_collectionView registerClass:[DFLDatePickerDayCell class] forCellWithReuseIdentifier:DFLDatePickerViewCellIdentifier];
-        [_collectionView registerClass:[DFLDatePickerMonthHeader class]
+        [_collectionView registerClass:self.cellClass forCellWithReuseIdentifier:DFLDatePickerViewCellIdentifier];
+        [_collectionView registerClass:self.headerClass
             forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                    withReuseIdentifier:DFLDatePickerViewMonthHeaderIdentifier];
 
@@ -315,10 +335,11 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
     return (NSUInteger) (1 + [self.calendar components:NSWeekCalendarUnit fromDate:fromSunday toDate:toSunday options:0].week);
 }
 
-- (DFLDatePickerDayCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    DFLDatePickerDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DFLDatePickerViewCellIdentifier forIndexPath:indexPath];
+    UICollectionViewCell <DFLDatePickerCell> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DFLDatePickerViewCellIdentifier
+                                                                                               forIndexPath:indexPath];
 
     NSDate *firstDayInMonth = [self dateForFirstDayInSection:indexPath.section];
     DFLDatePickerDate firstDayPickerDate = [self pickerDateFromDate:firstDayInMonth];
@@ -346,17 +367,17 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ((DFLDatePickerDayCell *) [collectionView cellForItemAtIndexPath:indexPath]).enabled;
+    return ((UICollectionViewCell <DFLDatePickerCell> *) [collectionView cellForItemAtIndexPath:indexPath]).enabled;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ((DFLDatePickerDayCell *) [collectionView cellForItemAtIndexPath:indexPath]).enabled;
+    return ((UICollectionViewCell <DFLDatePickerCell> *) [collectionView cellForItemAtIndexPath:indexPath]).enabled;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DFLDatePickerDayCell *cell = ((DFLDatePickerDayCell *) [collectionView cellForItemAtIndexPath:indexPath]);
+    UICollectionViewCell <DFLDatePickerCell> *cell = (UICollectionViewCell <DFLDatePickerCell> *) [collectionView cellForItemAtIndexPath:indexPath];
     [self willChangeValueForKey:@"selectedDate"];
     _selectedDate = cell
             ? [self.calendar dateFromComponents:[self dateComponentsFromPickerDate:cell.date]]
@@ -377,10 +398,9 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
 
     if ([kind isEqualToString:UICollectionElementKindSectionHeader])
     {
-
-        DFLDatePickerMonthHeader *monthHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                                                   withReuseIdentifier:DFLDatePickerViewMonthHeaderIdentifier
-                                                                                          forIndexPath:indexPath];
+        UICollectionReusableView <DFLDatePickerHeader> *monthHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                                                                         withReuseIdentifier:DFLDatePickerViewMonthHeaderIdentifier
+                                                                                                                forIndexPath:indexPath];
 
         NSDateFormatter *dateFormatter = [self.calendar dfl_dateFormatterNamed:@"calendarMonthHeader" withConstructor:^{
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

@@ -6,4 +6,6 @@
 
 @property(nonatomic, readwrite, strong) NSDate *selectedDate;
 
+@property(nonatomic, strong) Class cellClass;
+@property(nonatomic, strong) Class headerClass;
 @end

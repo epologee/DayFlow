@@ -1,7 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "DFLDatePickerHeader.h"
 
-@interface DFLDatePickerMonthHeader : UICollectionReusableView
-
-@property(nonatomic, readonly, strong) UILabel *textLabel;
-
+@interface DFLDatePickerMonthHeader : UICollectionReusableView <DFLDatePickerHeader>
 @end

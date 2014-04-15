@@ -1,9 +1,4 @@
-#import <UIKit/UIKit.h>
-#import "DFLDayFlow.h"
+#import "DFLDatePickerCell.h"
 
-@interface DFLDatePickerDayCell : UICollectionViewCell
-
-@property(nonatomic, readwrite, assign) DFLDatePickerDate date;
-@property(nonatomic, getter=isEnabled) BOOL enabled;
-
+@interface DFLDatePickerDayCell : UICollectionViewCell <DFLDatePickerCell>
 @end
