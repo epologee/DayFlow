@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E11FD8B7D0349E58E761841 /* libPods-DayFlow-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C4909A1B491CA66B9B64 /* libPods-DayFlow-Example.a */; };
+		8A9E937B60AF4B518EC6D74B /* libPods-DayFlow-ExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFD3910333C4E96AD451737 /* libPods-DayFlow-ExampleTests.a */; };
 		950FF36E18FD49EB00634811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF36D18FD49EB00634811 /* Foundation.framework */; };
 		950FF37018FD49EB00634811 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF36F18FD49EB00634811 /* CoreGraphics.framework */; };
 		950FF37218FD49EB00634811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF37118FD49EB00634811 /* UIKit.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FCF4DD600634051B09C35A6 /* Pods-DayFlow-Example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayFlow-Example.xcconfig"; path = "Pods/Pods-DayFlow-Example.xcconfig"; sourceTree = "<group>"; };
+		56C3B564F20D46F9AF1F761A /* Pods-DayFlow-ExampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayFlow-ExampleTests.xcconfig"; path = "Pods/Pods-DayFlow-ExampleTests.xcconfig"; sourceTree = "<group>"; };
+		8AFD3910333C4E96AD451737 /* libPods-DayFlow-ExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayFlow-ExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		950FF36A18FD49EB00634811 /* DayFlow-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DayFlow-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		950FF36D18FD49EB00634811 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		950FF36F18FD49EB00634811 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -40,7 +45,6 @@
 		950FF37718FD49EB00634811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		950FF37918FD49EB00634811 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		950FF37B18FD49EB00634811 /* DayFlow-Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayFlow-Example-Prefix.pch"; sourceTree = "<group>"; };
-		950FF37C18FD49EB00634811 /* DFXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFXAppDelegate.h; sourceTree = "<group>"; };
 		950FF37D18FD49EB00634811 /* DFXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFXAppDelegate.m; sourceTree = "<group>"; };
 		950FF37F18FD49EB00634811 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		950FF38518FD49EB00634811 /* DayFlow-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DayFlow-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +52,7 @@
 		950FF38E18FD49EB00634811 /* DayFlow-ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayFlow-ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		950FF39018FD49EB00634811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		950FF39218FD49EB00634811 /* DayFlow_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayFlow_ExampleTests.m; sourceTree = "<group>"; };
+		BC77C4909A1B491CA66B9B64 /* libPods-DayFlow-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayFlow-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 				950FF37018FD49EB00634811 /* CoreGraphics.framework in Frameworks */,
 				950FF37218FD49EB00634811 /* UIKit.framework in Frameworks */,
 				950FF36E18FD49EB00634811 /* Foundation.framework in Frameworks */,
+				6E11FD8B7D0349E58E761841 /* libPods-DayFlow-Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +74,7 @@
 				950FF38718FD49EB00634811 /* XCTest.framework in Frameworks */,
 				950FF38918FD49EB00634811 /* UIKit.framework in Frameworks */,
 				950FF38818FD49EB00634811 /* Foundation.framework in Frameworks */,
+				8A9E937B60AF4B518EC6D74B /* libPods-DayFlow-ExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				950FF38C18FD49EB00634811 /* DayFlow-ExampleTests */,
 				950FF36C18FD49EB00634811 /* Frameworks */,
 				950FF36B18FD49EB00634811 /* Products */,
+				3FCF4DD600634051B09C35A6 /* Pods-DayFlow-Example.xcconfig */,
+				56C3B564F20D46F9AF1F761A /* Pods-DayFlow-ExampleTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +109,8 @@
 				950FF36F18FD49EB00634811 /* CoreGraphics.framework */,
 				950FF37118FD49EB00634811 /* UIKit.framework */,
 				950FF38618FD49EB00634811 /* XCTest.framework */,
+				BC77C4909A1B491CA66B9B64 /* libPods-DayFlow-Example.a */,
+				8AFD3910333C4E96AD451737 /* libPods-DayFlow-ExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,7 +118,6 @@
 		950FF37318FD49EB00634811 /* DayFlow-Example */ = {
 			isa = PBXGroup;
 			children = (
-				950FF37C18FD49EB00634811 /* DFXAppDelegate.h */,
 				950FF37D18FD49EB00634811 /* DFXAppDelegate.m */,
 				950FF37F18FD49EB00634811 /* Images.xcassets */,
 				950FF37418FD49EB00634811 /* Supporting Files */,
@@ -151,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 950FF39618FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-Example" */;
 			buildPhases = (
+				05C4F3EED63D498EA2C8AAF2 /* Check Pods Manifest.lock */,
 				950FF36618FD49EB00634811 /* Sources */,
 				950FF36718FD49EB00634811 /* Frameworks */,
 				950FF36818FD49EB00634811 /* Resources */,
+				61BABBE0F9A94EF3817D52B8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 950FF39918FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-ExampleTests" */;
 			buildPhases = (
+				7DCA86F5740F49DBA4F475C8 /* Check Pods Manifest.lock */,
 				950FF38118FD49EB00634811 /* Sources */,
 				950FF38218FD49EB00634811 /* Frameworks */,
 				950FF38318FD49EB00634811 /* Resources */,
+				F21ABF726272429B860D590E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +221,8 @@
 			mainGroup = 950FF36118FD49EB00634811;
 			productRefGroup = 950FF36B18FD49EB00634811 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				950FF36918FD49EB00634811 /* DayFlow-Example */,
@@ -234,6 +250,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05C4F3EED63D498EA2C8AAF2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61BABBE0F9A94EF3817D52B8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DayFlow-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DCA86F5740F49DBA4F475C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F21ABF726272429B860D590E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DayFlow-ExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		950FF36618FD49EB00634811 /* Sources */ = {
@@ -355,6 +434,7 @@
 		};
 		950FF39718FD49EB00634811 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FCF4DD600634051B09C35A6 /* Pods-DayFlow-Example.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -368,6 +448,7 @@
 		};
 		950FF39818FD49EB00634811 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FCF4DD600634051B09C35A6 /* Pods-DayFlow-Example.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -381,6 +462,7 @@
 		};
 		950FF39A18FD49EB00634811 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56C3B564F20D46F9AF1F761A /* Pods-DayFlow-ExampleTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DayFlow-Example.app/DayFlow-Example";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -403,6 +485,7 @@
 		};
 		950FF39B18FD49EB00634811 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56C3B564F20D46F9AF1F761A /* Pods-DayFlow-ExampleTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DayFlow-Example.app/DayFlow-Example";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -438,6 +521,7 @@
 				950FF39818FD49EB00634811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		950FF39918FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +530,7 @@
 				950FF39B18FD49EB00634811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

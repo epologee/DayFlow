@@ -1,18 +1,26 @@
-#import "DFSAppDelegate.h"
 #import <DayFlow/DFLDatePickerView.h>
 #import <DayFlow/DFLDatePickerViewController.h>
 
-@interface DFSAppDelegate () <DFLDatePickerViewControllerDelegate>
+#import <UIKit/UIKit.h>
+
+@interface DFXAppDelegate : UIResponder <UIApplicationDelegate, DFLDatePickerViewControllerDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
 @end
 
-@implementation DFSAppDelegate
+@implementation DFXAppDelegate
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	DFLDatePickerViewController *picker = [DFLDatePickerViewController new];
+    
+    DFLDatePickerViewController *picker = [[DFLDatePickerViewController alloc] init];
 	picker.delegate = self;
-	self.window.rootViewController = picker;
-	[self.window makeKeyAndVisible];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:picker];
+	self.window.rootViewController = navigationController;
+	
+    [self.window makeKeyAndVisible];
 	return YES;
 }
 
