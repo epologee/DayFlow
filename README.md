@@ -4,13 +4,13 @@ iOS Date Picker + Infinite Scrolling.
 
 ## Play
 
-Look at the [Sample App](https://github.com/evadne/DayFlow-Sample). Check out the [Sample Video](http://vimeo.com/evadne/dayflow-debut). Have fun. Make it faster. Fork and send pull requests. Figure out hooks for customization.
+Look at the [example app](Example) after running `pod install` from your terminal. Check out the [Sample Video](http://vimeo.com/evadne/dayflow-debut). Have fun. Make it faster. Fork and send pull requests. Figure out hooks for customization.
 
 ## Use
 
-Plop `DFDatePickerViewController` in, and implement the one method in `<DFDatePickerViewControllerDelegate>`:
+Plop `DFLDatePickerViewController` in, and implement the one method in `<DFLDatePickerViewControllerDelegate>`:
 
-	- (void) datePickerViewController:(DFDatePickerViewController *)controller didSelectDate:(NSDate *)date;
+	- (void)datePickerViewController:(DFLDatePickerViewController *)controller didSelectDate:(NSDate *)date;
 
 That pretty much sums up what it does.
 
