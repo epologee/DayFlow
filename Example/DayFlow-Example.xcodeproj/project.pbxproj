@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950FF36E18FD49EB00634811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF36D18FD49EB00634811 /* Foundation.framework */; };
+		950FF37018FD49EB00634811 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF36F18FD49EB00634811 /* CoreGraphics.framework */; };
+		950FF37218FD49EB00634811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF37118FD49EB00634811 /* UIKit.framework */; };
+		950FF37818FD49EB00634811 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 950FF37618FD49EB00634811 /* InfoPlist.strings */; };
+		950FF37A18FD49EB00634811 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 950FF37918FD49EB00634811 /* main.m */; };
+		950FF37E18FD49EB00634811 /* DFXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 950FF37D18FD49EB00634811 /* DFXAppDelegate.m */; };
+		950FF38018FD49EB00634811 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950FF37F18FD49EB00634811 /* Images.xcassets */; };
+		950FF38718FD49EB00634811 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF38618FD49EB00634811 /* XCTest.framework */; };
+		950FF38818FD49EB00634811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF36D18FD49EB00634811 /* Foundation.framework */; };
+		950FF38918FD49EB00634811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF37118FD49EB00634811 /* UIKit.framework */; };
+		950FF39118FD49EB00634811 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 950FF38F18FD49EB00634811 /* InfoPlist.strings */; };
+		950FF39318FD49EB00634811 /* DayFlow_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950FF39218FD49EB00634811 /* DayFlow_ExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		950FF38A18FD49EB00634811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950FF36218FD49EB00634811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950FF36918FD49EB00634811;
+			remoteInfo = "DayFlow-Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		950FF36A18FD49EB00634811 /* DayFlow-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DayFlow-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		950FF36D18FD49EB00634811 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		950FF36F18FD49EB00634811 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		950FF37118FD49EB00634811 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		950FF37518FD49EB00634811 /* DayFlow-Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayFlow-Example-Info.plist"; sourceTree = "<group>"; };
+		950FF37718FD49EB00634811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		950FF37918FD49EB00634811 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		950FF37B18FD49EB00634811 /* DayFlow-Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayFlow-Example-Prefix.pch"; sourceTree = "<group>"; };
+		950FF37C18FD49EB00634811 /* DFXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFXAppDelegate.h; sourceTree = "<group>"; };
+		950FF37D18FD49EB00634811 /* DFXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFXAppDelegate.m; sourceTree = "<group>"; };
+		950FF37F18FD49EB00634811 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		950FF38518FD49EB00634811 /* DayFlow-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DayFlow-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		950FF38618FD49EB00634811 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		950FF38E18FD49EB00634811 /* DayFlow-ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayFlow-ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		950FF39018FD49EB00634811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		950FF39218FD49EB00634811 /* DayFlow_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayFlow_ExampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		950FF36718FD49EB00634811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950FF37018FD49EB00634811 /* CoreGraphics.framework in Frameworks */,
+				950FF37218FD49EB00634811 /* UIKit.framework in Frameworks */,
+				950FF36E18FD49EB00634811 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950FF38218FD49EB00634811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950FF38718FD49EB00634811 /* XCTest.framework in Frameworks */,
+				950FF38918FD49EB00634811 /* UIKit.framework in Frameworks */,
+				950FF38818FD49EB00634811 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		950FF36118FD49EB00634811 = {
+			isa = PBXGroup;
+			children = (
+				950FF37318FD49EB00634811 /* DayFlow-Example */,
+				950FF38C18FD49EB00634811 /* DayFlow-ExampleTests */,
+				950FF36C18FD49EB00634811 /* Frameworks */,
+				950FF36B18FD49EB00634811 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		950FF36B18FD49EB00634811 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950FF36A18FD49EB00634811 /* DayFlow-Example.app */,
+				950FF38518FD49EB00634811 /* DayFlow-ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		950FF36C18FD49EB00634811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				950FF36D18FD49EB00634811 /* Foundation.framework */,
+				950FF36F18FD49EB00634811 /* CoreGraphics.framework */,
+				950FF37118FD49EB00634811 /* UIKit.framework */,
+				950FF38618FD49EB00634811 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		950FF37318FD49EB00634811 /* DayFlow-Example */ = {
+			isa = PBXGroup;
+			children = (
+				950FF37C18FD49EB00634811 /* DFXAppDelegate.h */,
+				950FF37D18FD49EB00634811 /* DFXAppDelegate.m */,
+				950FF37F18FD49EB00634811 /* Images.xcassets */,
+				950FF37418FD49EB00634811 /* Supporting Files */,
+			);
+			path = "DayFlow-Example";
+			sourceTree = "<group>";
+		};
+		950FF37418FD49EB00634811 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				950FF37518FD49EB00634811 /* DayFlow-Example-Info.plist */,
+				950FF37618FD49EB00634811 /* InfoPlist.strings */,
+				950FF37918FD49EB00634811 /* main.m */,
+				950FF37B18FD49EB00634811 /* DayFlow-Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		950FF38C18FD49EB00634811 /* DayFlow-ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				950FF39218FD49EB00634811 /* DayFlow_ExampleTests.m */,
+				950FF38D18FD49EB00634811 /* Supporting Files */,
+			);
+			path = "DayFlow-ExampleTests";
+			sourceTree = "<group>";
+		};
+		950FF38D18FD49EB00634811 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				950FF38E18FD49EB00634811 /* DayFlow-ExampleTests-Info.plist */,
+				950FF38F18FD49EB00634811 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		950FF36918FD49EB00634811 /* DayFlow-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950FF39618FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-Example" */;
+			buildPhases = (
+				950FF36618FD49EB00634811 /* Sources */,
+				950FF36718FD49EB00634811 /* Frameworks */,
+				950FF36818FD49EB00634811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DayFlow-Example";
+			productName = "DayFlow-Example";
+			productReference = 950FF36A18FD49EB00634811 /* DayFlow-Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		950FF38418FD49EB00634811 /* DayFlow-ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950FF39918FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-ExampleTests" */;
+			buildPhases = (
+				950FF38118FD49EB00634811 /* Sources */,
+				950FF38218FD49EB00634811 /* Frameworks */,
+				950FF38318FD49EB00634811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950FF38B18FD49EB00634811 /* PBXTargetDependency */,
+			);
+			name = "DayFlow-ExampleTests";
+			productName = "DayFlow-ExampleTests";
+			productReference = 950FF38518FD49EB00634811 /* DayFlow-ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		950FF36218FD49EB00634811 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DFX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Radius;
+				TargetAttributes = {
+					950FF38418FD49EB00634811 = {
+						TestTargetID = 950FF36918FD49EB00634811;
+					};
+				};
+			};
+			buildConfigurationList = 950FF36518FD49EB00634811 /* Build configuration list for PBXProject "DayFlow-Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 950FF36118FD49EB00634811;
+			productRefGroup = 950FF36B18FD49EB00634811 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950FF36918FD49EB00634811 /* DayFlow-Example */,
+				950FF38418FD49EB00634811 /* DayFlow-ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		950FF36818FD49EB00634811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950FF37818FD49EB00634811 /* InfoPlist.strings in Resources */,
+				950FF38018FD49EB00634811 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950FF38318FD49EB00634811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950FF39118FD49EB00634811 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		950FF36618FD49EB00634811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950FF37A18FD49EB00634811 /* main.m in Sources */,
+				950FF37E18FD49EB00634811 /* DFXAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950FF38118FD49EB00634811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950FF39318FD49EB00634811 /* DayFlow_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		950FF38B18FD49EB00634811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950FF36918FD49EB00634811 /* DayFlow-Example */;
+			targetProxy = 950FF38A18FD49EB00634811 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		950FF37618FD49EB00634811 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950FF37718FD49EB00634811 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		950FF38F18FD49EB00634811 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950FF39018FD49EB00634811 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		950FF39418FD49EB00634811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		950FF39518FD49EB00634811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		950FF39718FD49EB00634811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayFlow-Example/DayFlow-Example-Prefix.pch";
+				INFOPLIST_FILE = "DayFlow-Example/DayFlow-Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		950FF39818FD49EB00634811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayFlow-Example/DayFlow-Example-Prefix.pch";
+				INFOPLIST_FILE = "DayFlow-Example/DayFlow-Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		950FF39A18FD49EB00634811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DayFlow-Example.app/DayFlow-Example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayFlow-Example/DayFlow-Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DayFlow-ExampleTests/DayFlow-ExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		950FF39B18FD49EB00634811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DayFlow-Example.app/DayFlow-Example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayFlow-Example/DayFlow-Example-Prefix.pch";
+				INFOPLIST_FILE = "DayFlow-ExampleTests/DayFlow-ExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		950FF36518FD49EB00634811 /* Build configuration list for PBXProject "DayFlow-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950FF39418FD49EB00634811 /* Debug */,
+				950FF39518FD49EB00634811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950FF39618FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950FF39718FD49EB00634811 /* Debug */,
+				950FF39818FD49EB00634811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		950FF39918FD49EB00634811 /* Build configuration list for PBXNativeTarget "DayFlow-ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950FF39A18FD49EB00634811 /* Debug */,
+				950FF39B18FD49EB00634811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 950FF36218FD49EB00634811 /* Project object */;
+}
