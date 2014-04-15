@@ -3,6 +3,7 @@
 #import "DFLDatePickerCell.h"
 #import "DFLDatePickerHeader.h"
 #import "NSCalendar+DFLAdditions.h"
+#import "DFLDatePickerView.h"
 
 static NSString *const DFLDatePickerViewCellIdentifier = @"DFLDatePickerViewCellIdentifier";
 static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerViewMonthHeaderIdentifier";
@@ -19,19 +20,12 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
 
 @implementation DFLDatePickerView
 
-@synthesize calendar = _calendar;
-@synthesize fromDate = _fromDate;
-@synthesize toDate = _toDate;
-@synthesize collectionView = _collectionView;
-@synthesize collectionViewLayout = _collectionViewLayout;
-
 - (instancetype)initWithCalendar:(NSCalendar *)calendar
 {
-
     self = [super initWithFrame:CGRectZero];
+
     if (self)
     {
-
         _calendar = calendar;
 
         NSDate *now = [_calendar dateFromComponents:[_calendar components:NSYearCalendarUnit | NSMonthCalendarUnit fromDate:[NSDate date]]];
@@ -68,7 +62,7 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
 {
     if (!_cellClass)
     {
-        self.cellClass = NSClassFromString(@"DFLDatePickerDayCell");
+        self.cellClass = [self.delegate datePickerViewCellClass:self];
     }
 
     return _cellClass;
@@ -78,7 +72,7 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
 {
     if (!_headerClass)
     {
-        self.headerClass = NSClassFromString(@"DFLDatePickerMonthHeader");
+        self.headerClass = [self.delegate datePickerViewHeaderClass:self];
     }
 
     return _headerClass;

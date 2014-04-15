@@ -1,8 +1,12 @@
 #import "DFLDatePickerViewController.h"
 
-@implementation DFLDatePickerViewController
+@interface DFLDatePickerViewController () <DFLDatePickerViewDelegate>
+@end
 
-@synthesize datePickerView = _datePickerView;
+@implementation DFLDatePickerViewController
+{
+    DFLDatePickerView *_datePickerView;
+}
 
 - (void)viewDidLoad
 {
@@ -14,23 +18,49 @@
 {
     if (!_datePickerView)
     {
-        _datePickerView = [[DFLDatePickerView alloc] init];
+        self.datePickerView = [[DFLDatePickerView alloc] init];
         _datePickerView.frame = self.view.bounds;
         _datePickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _datePickerView.delegate = self;
     }
+
     return _datePickerView;
+}
+
+- (Class)datePickerViewCellClass:(DFLDatePickerView *)pickerView
+{
+    Class cellClass = NULL;
+
+    if ([self.delegate respondsToSelector:@selector(datePickerViewControllerCellClass:)])
+    {
+        cellClass = [self.delegate datePickerViewControllerCellClass:self];
+    }
+
+    return cellClass ?: NSClassFromString(@"DFLDatePickerDayCell");
+}
+
+- (Class)datePickerViewHeaderClass:(DFLDatePickerView *)pickerView
+{
+    Class headerClass = NULL;
+
+    if ([self.delegate respondsToSelector:@selector(datePickerViewControllerHeaderClass:)])
+    {
+        headerClass = [self.delegate datePickerViewControllerHeaderClass:self];
+    }
+
+    return headerClass ?: NSClassFromString(@"DFLDatePickerMonthHeader");
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self addObserver:self forKeyPath:@"datePickerView.selectedDate" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(void *) self];
+    [self addObserver:self forKeyPath:@"datePickerView.selectedDate" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self removeObserver:self forKeyPath:@"datePickerView.selectedDate" context:(void *) self];
+    [self removeObserver:self forKeyPath:@"datePickerView.selectedDate" context:nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

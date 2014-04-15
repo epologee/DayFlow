@@ -14,13 +14,14 @@
 		950FF37218FD49EB00634811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF37118FD49EB00634811 /* UIKit.framework */; };
 		950FF37818FD49EB00634811 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 950FF37618FD49EB00634811 /* InfoPlist.strings */; };
 		950FF37A18FD49EB00634811 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 950FF37918FD49EB00634811 /* main.m */; };
-		950FF37E18FD49EB00634811 /* DFXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 950FF37D18FD49EB00634811 /* DFXAppDelegate.m */; };
 		950FF38018FD49EB00634811 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950FF37F18FD49EB00634811 /* Images.xcassets */; };
 		950FF38718FD49EB00634811 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF38618FD49EB00634811 /* XCTest.framework */; };
 		950FF38818FD49EB00634811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF36D18FD49EB00634811 /* Foundation.framework */; };
 		950FF38918FD49EB00634811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950FF37118FD49EB00634811 /* UIKit.framework */; };
 		950FF39118FD49EB00634811 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 950FF38F18FD49EB00634811 /* InfoPlist.strings */; };
 		950FF39318FD49EB00634811 /* DayFlow_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950FF39218FD49EB00634811 /* DayFlow_ExampleTests.m */; };
+		E42071504D0F85C7E0543E02 /* DFXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E42071E658F629134A282D24 /* DFXAppDelegate.m */; };
+		E4207FF732A8753C4B121D2E /* DFXDatePickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4207613F641F57C3A6A024C /* DFXDatePickerViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		950FF37718FD49EB00634811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		950FF37918FD49EB00634811 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		950FF37B18FD49EB00634811 /* DayFlow-Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayFlow-Example-Prefix.pch"; sourceTree = "<group>"; };
-		950FF37D18FD49EB00634811 /* DFXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFXAppDelegate.m; sourceTree = "<group>"; };
 		950FF37F18FD49EB00634811 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		950FF38518FD49EB00634811 /* DayFlow-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DayFlow-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		950FF38618FD49EB00634811 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -53,6 +53,9 @@
 		950FF39018FD49EB00634811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		950FF39218FD49EB00634811 /* DayFlow_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayFlow_ExampleTests.m; sourceTree = "<group>"; };
 		BC77C4909A1B491CA66B9B64 /* libPods-DayFlow-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayFlow-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42071E658F629134A282D24 /* DFXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFXAppDelegate.m; sourceTree = "<group>"; };
+		E42073EB9323F3B9C52BF8CA /* DFXDatePickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFXDatePickerViewCell.h; sourceTree = "<group>"; };
+		E4207613F641F57C3A6A024C /* DFXDatePickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFXDatePickerViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +121,9 @@
 		950FF37318FD49EB00634811 /* DayFlow-Example */ = {
 			isa = PBXGroup;
 			children = (
-				950FF37D18FD49EB00634811 /* DFXAppDelegate.m */,
 				950FF37F18FD49EB00634811 /* Images.xcassets */,
 				950FF37418FD49EB00634811 /* Supporting Files */,
+				E42077EC598F68DD2C0AA1C0 /* Source */,
 			);
 			path = "DayFlow-Example";
 			sourceTree = "<group>";
@@ -152,6 +155,24 @@
 				950FF38F18FD49EB00634811 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E420738A6F96C9516D597E90 /* Custom appearance */ = {
+			isa = PBXGroup;
+			children = (
+				E4207613F641F57C3A6A024C /* DFXDatePickerViewCell.m */,
+				E42073EB9323F3B9C52BF8CA /* DFXDatePickerViewCell.h */,
+			);
+			path = "Custom appearance";
+			sourceTree = "<group>";
+		};
+		E42077EC598F68DD2C0AA1C0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E42071E658F629134A282D24 /* DFXAppDelegate.m */,
+				E420738A6F96C9516D597E90 /* Custom appearance */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				950FF37A18FD49EB00634811 /* main.m in Sources */,
-				950FF37E18FD49EB00634811 /* DFXAppDelegate.m in Sources */,
+				E42071504D0F85C7E0543E02 /* DFXAppDelegate.m in Sources */,
+				E4207FF732A8753C4B121D2E /* DFXDatePickerViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

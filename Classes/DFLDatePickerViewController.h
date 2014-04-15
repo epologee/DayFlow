@@ -1,17 +1,23 @@
 #import <UIKit/UIKit.h>
 #import "DFLDatePickerView.h"
 
-@class DFLDatePickerViewController;
-
-@protocol DFLDatePickerViewControllerDelegate
-
-- (void)datePickerViewController:(DFLDatePickerViewController *)controller didSelectDate:(NSDate *)date;
-
-@end
+@protocol DFLDatePickerViewControllerDelegate;
 
 @interface DFLDatePickerViewController : UIViewController
 
-@property(nonatomic, readonly, strong) DFLDatePickerView *datePickerView;
-@property(nonatomic, readwrite, weak) id <DFLDatePickerViewControllerDelegate> delegate;
+@property(nonatomic, strong) DFLDatePickerView *datePickerView;
+@property(nonatomic, weak) id <DFLDatePickerViewControllerDelegate> delegate;
+
+@end
+
+@protocol DFLDatePickerViewControllerDelegate <NSObject>
+
+- (void)datePickerViewController:(DFLDatePickerViewController *)controller didSelectDate:(NSDate *)date;
+
+@optional
+
+- (Class)datePickerViewControllerCellClass:(DFLDatePickerViewController *)controller;
+
+- (Class)datePickerViewControllerHeaderClass:(DFLDatePickerViewController *)controller;
 
 @end

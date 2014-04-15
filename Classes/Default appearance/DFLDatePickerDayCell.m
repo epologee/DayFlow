@@ -2,8 +2,8 @@
 
 @interface DFLDatePickerDayCell ()
 
-@property(nonatomic, readonly, strong) UIImageView *imageView;
-@property(nonatomic, readonly, strong) UIView *overlayView;
+@property(nonatomic, strong) UIImageView *imageView;
+@property(nonatomic, strong) UIView *overlayView;
 
 @end
 
@@ -11,8 +11,6 @@
 
 @synthesize date = _date;
 @synthesize enabled = _enabled;
-@synthesize imageView = _imageView;
-@synthesize overlayView = _overlayView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -114,7 +112,7 @@
 {
     if (!_overlayView)
     {
-        _overlayView = [[UIView alloc] initWithFrame:self.contentView.bounds];
+        self.overlayView = [[UIView alloc] initWithFrame:self.contentView.bounds];
         _overlayView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _overlayView.backgroundColor = [UIColor blackColor];
         _overlayView.alpha = 0.25f;
@@ -127,7 +125,7 @@
 {
     if (!_imageView)
     {
-        _imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
+        self.imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
         _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self.contentView addSubview:_imageView];
     }
