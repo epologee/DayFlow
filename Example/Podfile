@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+
+target "DayFlow-Example", :exclusive => true do
+  pod "DayFlow", :path => "../"
+end
+
+target "DayFlow-ExampleTests", :exclusive => true do
+  pod "Kiwi/XCTest"
+end
