@@ -16,8 +16,8 @@
 
 @optional
 
-- (Class)datePickerViewControllerCellClass:(DFLDatePickerViewController *)controller;
+- (Class <DFLDatePickerCell>)datePickerViewControllerCellClass:(DFLDatePickerViewController *)controller;
 
-- (Class)datePickerViewControllerHeaderClass:(DFLDatePickerViewController *)controller;
+- (Class <DFLDatePickerHeader>)datePickerViewControllerHeaderClass:(DFLDatePickerViewController *)controller;
 
 @end

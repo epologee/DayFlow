@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol DFLDatePickerViewDelegate;
+@protocol DFLDatePickerCell;
+@protocol DFLDatePickerHeader;
 
 @interface DFLDatePickerView : UIView
 
@@ -15,8 +17,8 @@
 
 @protocol DFLDatePickerViewDelegate <NSObject>
 
-- (Class)datePickerViewCellClass:(DFLDatePickerView *)pickerView;
+- (Class <DFLDatePickerCell>)datePickerViewCellClass:(DFLDatePickerView *)pickerView;
 
-- (Class)datePickerViewHeaderClass:(DFLDatePickerView *)pickerView;
+- (Class <DFLDatePickerHeader>)datePickerViewHeaderClass:(DFLDatePickerView *)pickerView;
 
 @end

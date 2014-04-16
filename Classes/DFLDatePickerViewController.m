@@ -1,4 +1,6 @@
 #import "DFLDatePickerViewController.h"
+#import "DFLDatePickerCell.h"
+#import "DFLDatePickerHeader.h"
 
 @interface DFLDatePickerViewController () <DFLDatePickerViewDelegate>
 @end
@@ -6,6 +8,8 @@
 @implementation DFLDatePickerViewController
 {
     DFLDatePickerView *_datePickerView;
+    Class <DFLDatePickerCell> _cellClass;
+    Class <DFLDatePickerHeader> _headerClass;
 }
 
 - (void)viewDidLoad
@@ -27,40 +31,50 @@
     return _datePickerView;
 }
 
-- (Class)datePickerViewCellClass:(DFLDatePickerView *)pickerView
+- (Class <DFLDatePickerCell>)datePickerViewCellClass:(DFLDatePickerView *)pickerView
 {
-    Class cellClass = NULL;
-
-    if ([self.delegate respondsToSelector:@selector(datePickerViewControllerCellClass:)])
+    if (!_cellClass)
     {
-        cellClass = [self.delegate datePickerViewControllerCellClass:self];
+        if ([self.delegate respondsToSelector:@selector(datePickerViewControllerCellClass:)])
+        {
+            _cellClass = [self.delegate datePickerViewControllerCellClass:self];
+        }
+        else
+        {
+            _cellClass = NSClassFromString(@"DFLDatePickerDayCell");
+        }
     }
 
-    return cellClass ?: NSClassFromString(@"DFLDatePickerDayCell");
+    return _cellClass;
 }
 
-- (Class)datePickerViewHeaderClass:(DFLDatePickerView *)pickerView
+- (Class <DFLDatePickerHeader>)datePickerViewHeaderClass:(DFLDatePickerView *)pickerView
 {
-    Class headerClass = NULL;
-
-    if ([self.delegate respondsToSelector:@selector(datePickerViewControllerHeaderClass:)])
+    if (!_headerClass)
     {
-        headerClass = [self.delegate datePickerViewControllerHeaderClass:self];
+        if ([self.delegate respondsToSelector:@selector(datePickerViewControllerHeaderClass:)])
+        {
+            _headerClass = [self.delegate datePickerViewControllerHeaderClass:self];
+        }
+        else
+        {
+            _headerClass = NSClassFromString(@"DFLDatePickerMonthHeader");
+        }
     }
 
-    return headerClass ?: NSClassFromString(@"DFLDatePickerMonthHeader");
+    return _headerClass;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self addObserver:self forKeyPath:@"datePickerView.selectedDate" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"datePickerView.selectedDate" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void *)self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self removeObserver:self forKeyPath:@"datePickerView.selectedDate" context:nil];
+    [self removeObserver:self forKeyPath:@"datePickerView.selectedDate" context:(__bridge void *)self];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

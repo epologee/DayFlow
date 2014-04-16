@@ -3,12 +3,12 @@
 #import "DFLDatePickerCell.h"
 #import "DFLDatePickerHeader.h"
 #import "NSCalendar+DFLAdditions.h"
-#import "DFLDatePickerView.h"
+#import "DFLDatePickerLayout.h"
 
 static NSString *const DFLDatePickerViewCellIdentifier = @"DFLDatePickerViewCellIdentifier";
 static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerViewMonthHeaderIdentifier";
 
-@interface DFLDatePickerView () <DFLDatePickerCollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface DFLDatePickerView () <DFLDatePickerCollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, readonly, strong) NSCalendar *calendar;
 @property(nonatomic, readonly, assign) DFLDatePickerDate fromDate;
@@ -58,7 +58,7 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
     return self;
 }
 
-- (Class)cellClass
+- (Class <DFLDatePickerCell>)cellClass
 {
     if (!_cellClass)
     {
@@ -68,7 +68,7 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
     return _cellClass;
 }
 
-- (Class)headerClass
+- (Class <DFLDatePickerHeader>)headerClass
 {
     if (!_headerClass)
     {
@@ -111,9 +111,9 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
     if (!_collectionView)
     {
         self.collectionView = [[DFLDatePickerCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.collectionViewLayout];
-        _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
+        [(DFLDatePickerCollectionView *) _collectionView setPickerCollectionViewDelegate:self];
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         [_collectionView registerClass:self.cellClass forCellWithReuseIdentifier:DFLDatePickerViewCellIdentifier];
@@ -137,11 +137,11 @@ static NSString *const DFLDatePickerViewMonthHeaderIdentifier = @"DFLDatePickerV
 
     if (!_collectionViewLayout)
     {
-        self.collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
         _collectionViewLayout.headerReferenceSize = (CGSize) {320, 64};
         _collectionViewLayout.itemSize = (CGSize) {44, 44};
         _collectionViewLayout.minimumLineSpacing = 2.0f;
         _collectionViewLayout.minimumInteritemSpacing = 2.0f;
+        self.collectionViewLayout = [[DFLDatePickerLayout alloc] init];
     }
 
     return _collectionViewLayout;
